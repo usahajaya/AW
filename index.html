@@ -9,7 +9,7 @@
       name="apple-mobile-web-app-status-bar-style"
       content="black-translucent"
     />
-    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="icon" href="asset/favicon.png" type="image/png" />
 
     <title>A&W</title>
     <!-- FONT -->
@@ -36,7 +36,7 @@
     <section class="cover">
       <h1>Asep & Windy</h1>
       <p>Kepada Yth,</p>
-      <h3 id="guestName">tamu undangan</h3>
+      <h3 id="guestName">Bapak/Ibu/Saudara/i</h3>
 
       <button href="#A&W" id="openBtn">Buka Undangan</button>
       <small
@@ -51,7 +51,6 @@
       <p>04.06.26</p>
     </main>
     <!-- ayat -->
-
     <div class="ayat">
       <h2>Shalawat Munjiyat</h2>
       <p class="arabic">
@@ -97,16 +96,17 @@
           Ibu Juanengsih
         </p>
       </div>
-      <hr style="width: 100%; size: 50px" />
+      <hr />
+      <!-- hr -->
       <!-- wanita -->
       <div class="wanita">
         <img src="img/t1.png" alt="Windy Yulianti Kulsum S.P" class="foto" />
         <a
-          href="https://instagram.com/windyyuliati893"
+          href="https://instagram.com/windyyulianti893"
           class="ig"
           target="_blank"
         >
-          <i class="fa-brands fa-instagram"></i>windyyuliati893
+          <i class="fa-brands fa-instagram"></i>windyyulianti893
         </a>
         <h2>Windy Yulianti Kulsum S.P</h2>
         <p>
@@ -241,6 +241,7 @@
       <p>Mulai Dekat Lamaran 8 November 2025</p>
     </section>
     <!-- fotofoto -->
+
     <section class="moments">
       <h2>Galeri Kami</h2>
       <div class="gallery">
@@ -267,9 +268,122 @@
         </div>
       </div>
     </section>
+    <!-- form rsvp ----------================================================= -->
+    <!-- rekening -->
+    <section>
+      <div id="gift" class="gift-section">
+        <p class="amplop">
+          Kami sangat menghargai setiap doa dan perhatian yang Anda berikan.
+          Kehadiran Anda merupakan kebahagiaan dan kehormatan bagi kami. <br />
 
+          Namun apabila berhalangan hadir, dan berkenan memberikan tanda kasih
+          sebagai bentuk cinta dan dukungan, dengan tulus hati kami menerimanya
+          melalui rekening berikut.
+        </p>
+        <!-- nomor rekening -->
+        <div class="gift-wrapper">
+          <!-- rekening 1 -->
+          <div class="gift-box">
+            <img class="logobank" src="asset/seabank.png" alt="seabank" />
+
+            <div class="bank-info">
+              <span class="rek">901978675243</span>
+              <p class="an">Asep Komarul Hayat</p>
+
+              <button class="btn-copy" data-rek="901978675243">
+                Salin Nomor
+              </button>
+            </div>
+          </div>
+
+          <!-- rekening 2 -->
+          <div class="gift-box">
+            <img class="logobank" src="asset/seabank.png" alt="seabank" />
+
+            <div class="bank-info">
+              <span class="rek">901479375033</span>
+              <p class="an">Windy Yulianti</p>
+
+              <button class="btn-copy" data-rek="901479375033">
+                Salin Nomor
+              </button>
+            </div>
+          </div>
+          <!-- dana -->
+          <div class="gift-box">
+            <img class="logodana" src="asset/dana.png" alt="seabank" />
+
+            <div class="bank-info">
+              <span class="rek">08111114539</span>
+              <p class="an">Asep Komarul Hayat</p>
+
+              <button class="btn-copy" data-rek="08111114539">
+                Salin Nomor
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- konfirmasi kehadiran/ rsvp -->
+      <section id="rsvp" class="rsvp">
+        <h2>Konfirmasi Kehadiran</h2>
+        <form id="rsvp-form">
+          <div class="form-group">
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" name="nama" required />
+          </div>
+
+          <div class="form-group">
+            <label for="jumlah">Jumlah</label>
+            <input
+              type="number"
+              id="jumlah"
+              name="jumlah"
+              min="1"
+              max="100"
+              value="1"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="status">Konfirmasi</label>
+            <select id="status" name="status">
+              <option value="Hadir">Hadir</option>
+              <option value="Tidak Hadir">Tidak Hadir</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn-submit">Kirim</button>
+        </form>
+        <hr />
+      </section>
+
+      <!-- ucapan dan doa =============================================== -->
+      <section class="komentar-section">
+        <h2>Ucapan & Doa</h2>
+
+        <form id="formKomentar">
+          <input
+            type="text"
+            id="namaKomentar"
+            placeholder="Nama Anda"
+            required
+          />
+          <textarea
+            id="pesanKomentar"
+            placeholder="Tulis ucapan anda"
+            required
+          ></textarea>
+          <button type="submit">Kirim</button>
+        </form>
+
+        <p id="statusKomentar" class="status"></p>
+        <div id="commentsList"></div>
+      </section>
+    </section>
     <!-- footer -->
-     <section class="footer">
+    <section class="footer">
       <p>
         Atas kehadiran dan do'a restu dari Bapak/Ibu/Saudara/i sekalian, kami
         mengucapkan Terimakasih
@@ -284,6 +398,12 @@
         <small>@ Wedding Invitation <br />by Usaha Jaya</small>
       </footer>
     </section>
+    <div id="musicControl" style="display: none">
+      <i class="fa-solid fa-music"></i>
+    </div>
+    <audio id="bg-music" loop preload="auto">
+      <source src="BeautifulInWhite.mp3" type="audio/mp3" />
+    </audio>
     <!-- script -->
     <script src="script.js"></script>
   </body>

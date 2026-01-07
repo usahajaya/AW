@@ -6,7 +6,7 @@
   text-decoration: none;
 }
 :root {
-  --border: 3px solid #93272e;
+  --border: 2px solid #93272e;
   --bg1: rgba(207, 207, 207, 0.527);
   --bg2: black;
   --btn: #83212b;
@@ -45,12 +45,6 @@ body {
   z-index: -1;
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
-  /* background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.1) 70%,
-    var(--btn) 100%
-  ); */
-  /* background: rgba(255, 255, 255, 0.1); */
 }
 
 /* font */
@@ -103,7 +97,6 @@ p {
   z-index: 1;
 }
 
-/* pastikan teks di atas overlay */
 .cover > * {
   position: relative;
   z-index: 2;
@@ -163,13 +156,15 @@ body.open {
   margin-top: -50px;
 }
 
+/* calon mempelai */
 .calonmempelai {
   background: linear-gradient(
     to bottom,
     rgb(255, 255, 255) 0%,
-    rgb(255, 255, 255) 2%,
-    rgba(255, 255, 255, 0.1) 85%,
-    var(--btn2) 100%
+    rgb(255, 255, 255) 1%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgb(255,255,255) 99%,
+    rgb(255,255,255) 100%
   );
   color: var(--btn);
   position: relative;
@@ -191,8 +186,9 @@ body.open {
 .foto {
   width: 200px;
   background: var(--btn);
-  padding: 15px 15px 50px;
+  padding: 7px 7px 50px;
   display: block;
+  border-radius: 5px;
 }
 .ig {
   display: inline-block;
@@ -201,7 +197,6 @@ body.open {
   padding: 7px 13px;
   margin-top: -40px;
   background: white;
-  /* background: linear-gradient(150deg, red, orange, rgb(255, 234, 0)); */
   color: var(--btn);
   border-radius: 15px;
   font-size: 13px;
@@ -211,12 +206,12 @@ body.open {
   margin-right: 5px;
 }
 .calonmempelai h2 {
-  margin: 20px;
+  margin: 20px auto;
   font-size: clamp(10px, 8vw, 90px);
 }
 
 .calonmempelai p {
-  margin-bottom: 20px;
+  margin: 20px;
   color: black;
 }
 
@@ -250,7 +245,7 @@ hr {
 .detail-acara {
   max-width: 100%;
   text-align: flex-start;
-  background: rgba(255, 0, 0, 0.2);
+  background: rgba(255, 0, 0, 0.3);
   padding: 0 10px 40px;
   overflow: hidden;
 }
@@ -270,8 +265,8 @@ hr {
   /* background: #fff; */
   background: linear-gradient(
     to bottom,
-    var(--btn) 70px,
-    white 70px,
+    var(--btn) 60px,
+    white 60px,
     white 100px
   );
   padding: 25px;
@@ -362,11 +357,11 @@ hr {
 }
 .lovestory h2 {
   color: var(--btn);
-  padding-bottom: 40px;
 }
 .lovestory img {
   width: 200px;
   border-radius: 20px;
+  margin: 20px auto;
 }
 /* fotofoto */
 .moments {
@@ -399,6 +394,263 @@ hr {
   display: block;
 }
 
+/* gift kado */
+/* ==========================================gifts ========== */
+.gift-section {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 0, 0, 0.3);
+}
+
+.gift-section .amplop {
+  color: white;
+}
+
+.btn-copy {
+  margin-top: 10px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  background: var(--btn);
+  font-family: "Montserrat", cursive;
+}
+
+.logobank {
+  width: 40px;
+}
+.logodana {
+  width: 80px;
+}
+.gift-box {
+  background: rgb(255, 255, 255);
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 200px;
+  margin: 20px auto;
+}
+
+/* konfirmasi kehadiran */
+
+.rsvp {
+  background: white;
+  text-align: center;
+}
+.rsvp {
+  padding: 20px;
+  text-align: center;
+  background: white;
+}
+
+.rsvp h2 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+#rsvp-form {
+  max-width: 400px;
+  margin: auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 20px;
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.form-group input {
+  border: none;
+}
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: var(--border);
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: rgb(214, 2, 2);
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  background: var(--btn);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* komentar */
+.komentar-section {
+  padding: 8px 20px;
+  background-color: white;
+}
+
+.komentar-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+#formKomentar {
+  max-width: 400px;
+  margin: auto;
+  padding: 30px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+  margin: 0 auto 30px;
+}
+
+#formKomentar input,
+#formKomentar textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  border: var(--border);
+  font-size: 1rem;
+  font-family: "Montserrat", cursive;
+}
+
+#formKomentar textarea {
+  resize: none;
+  height: 90px;
+}
+
+#formKomentar button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 15px;
+  background: var(--btn);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "Montserrat", cursive;
+}
+
+.status {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.status.success {
+  color: #158d00;
+}
+
+.status.error {
+  color: #ff0808;
+}
+
+/*  */
+#commentsList {
+   max-width: 300px;
+  margin: 20px 20px 20px;
+  max-height: 500px;       
+  overflow-y: auto;         
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-right: 6px;
+}
+#commentsList::-webkit-scrollbar {
+  width: 5px;
+}
+#commentsList::-webkit-scrollbar-thumb {
+  background: var(--btn);
+  border-radius: 10px;
+}
+.comment-item {
+  padding: 14px;
+  border-radius: 10px;
+  background: rgba(255, 142, 142, 0.438);
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+}
+.comment-item h4 {
+  margin: 0 0 6px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.comment-item p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+
+.comment-name {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #ffd86b;
+  /*  */
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.comment-text {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #000000;
+  white-space: normal; /* IZINKAN TURUN BARIS */
+  overflow-wrap: break-word; /* PATAHKAN kata panjang */
+  word-wrap: break-word;
+  word-break: normal;
+  line-height: 1.6;
+}
+
+#formKomentar input:focus,
+#pesanKomentar:focus,
+#formKomentar select:focus {
+  outline: none;
+  border-color: rgb(214, 2, 2);
+}
+/* notifikasi berhasil di kirim */
+.status {
+  display: none;
+  text-align: center;
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.status.success {
+  display: block;
+  background: #e6ffe6;
+  color: #158d00;
+}
+
+.status.error {
+  display: block;
+  background: #ffe6e6;
+  color: #c70000;
+}
+
 /* footer */
 .footer {
   text-align: center;
@@ -419,4 +671,21 @@ footer {
   background-color: var(--btn);
   color: rgb(255, 255, 255);
   padding-bottom: 10px;
+}
+/* music control */
+#musicControl {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--btn);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 20;
 }
